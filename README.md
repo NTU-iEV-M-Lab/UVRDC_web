@@ -18,7 +18,7 @@ npm run preview
 
 ## GitHub Pages
 
-發布儲存庫： https://github.com/liaolaurence930531-tech/UVRDC_web
+發布儲存庫： https://github.com/NTU-iEV-M-Lab/UVRDC_web
 
 在儲存庫 Settings → Pages → Build and deployment，將 Source 設為 GitHub Actions。主分支 main 的推送會執行 Publish GitHub Pages；也可於 Actions 手動執行。工作流程讀取實際 Pages 網址，自動設定子路徑，通過型別、內容、單元測試、建置及瀏覽器檢查後，僅部署 dist。首次發布結果以 Actions 與 Pages 顯示的網址為準。
 
