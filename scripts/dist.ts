@@ -5,6 +5,7 @@ import type { SiteData } from '../content/types';
 import type {PublicContent} from '../content/localization';
 import { getRoutes,getAllRoutes,notFoundRoute } from '../src/lib/routes';
 import { withBase } from '../src/lib/paths';
+import verificationFiles from '../content/site-verification.json';
 export function hasRetiredResearchLink(text:string){return /(?:href|src)=["'](?!https?:\/\/)(?:[^"']*\/)?research\//.test(text);}
 export async function filesUnder(dir:string):Promise<string[]>{const entries=await readdir(dir,{withFileTypes:true});return(await Promise.all(entries.map(e=>e.isDirectory()?filesUnder(resolve(dir,e.name)):Promise.resolve([resolve(dir,e.name)])))).flat();}
 export async function checkDist(dir:string,input:SiteData|PublicContent,config:{base:string;production:boolean;site:string;generatedAssets?:string[]}){
@@ -14,15 +15,17 @@ export async function checkDist(dir:string,input:SiteData|PublicContent,config:{
  const root=resolve(dir),files=await filesUnder(root),allowed=new Set([...data.media.map(m=>m.file),...config.generatedAssets||[]]);const errors:string[]=[];
  const routeFiles=new Set(allRoutes.map(r=>r.kind==='not-found'?r.path.slice(1):r.path.slice(1)+'index.html'));
  for(const file of files){
-  const name=relative(root,file).replaceAll('\\','/');
+  const name=relative(root,file).replaceAll('\\','/'),verification=verificationFiles.includes(name);
   if(name.startsWith('assets/')&&!allowed.has(name))errors.push(`未選定的素材: ${name}`);
-  if(!/^(assets\/[a-zA-Z0-9_.-]+\.(js|css|webp|avif|png|svg)|(?:[a-z0-9-]+\/)*index\.html|(?:en\/)?404\.html|robots\.txt|sitemap\.xml|THIRD_PARTY_NOTICES\.txt)$/.test(name))errors.push(`不允許的發布檔案: ${name}`);
-  if(name.endsWith('.html')&&!routeFiles.has(name))errors.push(`未登錄的公開路由: ${name}`);
+  if(!verification&&!/^(assets\/[a-zA-Z0-9_.-]+\.(js|css|webp|avif|png|svg)|(?:[a-z0-9-]+\/)*index\.html|(?:en\/)?404\.html|robots\.txt|sitemap\.xml|THIRD_PARTY_NOTICES\.txt)$/.test(name))errors.push(`不允許的發布檔案: ${name}`);
+  if(name.endsWith('.html')&&!routeFiles.has(name)&&!verification)errors.push(`未登錄的公開路由: ${name}`);
   if(/\.(html|js|css|txt|xml)$/.test(file)){
-   const text=await readFile(file,'utf8');if(/drive\.google\.com|docs\.google\.com|oaiusercontent|sediment:|SECRET_DRAFT_MARKER|PRIVATE_NOTE_MARKER|RETIRED_RESEARCH_MARKER|STRICTLY CONFIDENTIAL/.test(text))errors.push(`產物含非公開資訊: ${name}`);
+   const text=await readFile(file,'utf8');if(verification&&(!/^google[0-9a-f]+\.html$/.test(name)||text.trim()!==`google-site-verification: ${name}`))errors.push(`驗證檔案內容不符: ${name}`);
+   if(/drive\.google\.com|docs\.google\.com|oaiusercontent|sediment:|SECRET_DRAFT_MARKER|PRIVATE_NOTE_MARKER|RETIRED_RESEARCH_MARKER|STRICTLY CONFIDENTIAL/.test(text))errors.push(`產物含非公開資訊: ${name}`);
    if(hasRetiredResearchLink(text))errors.push(`產物仍含撤下的研究連結: ${name}`);
   }
  }
+ for(const name of verificationFiles)if(!files.includes(resolve(root,name)))errors.push(`缺少已登錄的驗證檔案: ${name}`);
  if(errors.length)throw new Error(errors.join('\n'));
  const routes=allRoutes.map(r=>r.path);
  const titles=new Set<string>();

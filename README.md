@@ -24,6 +24,8 @@ npm run preview
 
 正式模式會提供可索引的靜態正文、各頁canonical、語言關聯與sitemap.xml；預覽及404維持noindex。上線後可在Google Search Console驗證正式網站並提交網站地圖，Google自行決定收錄與排名。若首次推送時尚未設定Pages Source，先完成上述設定，再重新執行發布工作流程。
 
+Search Console採HTML檔案驗證，指定檔案位於public/google2d29a02616a73239.html，發布後可由網站根目錄直接讀取。content/site-verification.json列出允許的驗證檔，建置會核對內容並拒絕未選定HTML。請持續保留此檔以維持驗證有效。
+
 ## 內容維護
 
 繁中公開內容在 content/catalog.ts，素材清單在 content/media.json。英文中心與活動翻譯在 content/en，介面字串在 content/en/messages.json。相關連結在 content/related-links.ts。新增活動時提供唯一slug、日期、角色、來源識別、完整正文及英文翻譯，並通過建置檢查。

@@ -12,6 +12,14 @@ test('官方外部研究資源可連結，站內撤下的研究路徑仍受阻�
 import { projectContent } from '../scripts/content';
 import { catalog } from '../content/catalog';
 import { releaseConfig } from '../scripts/build';
+import verificationFiles from '../content/site-verification.json';
+
+test('指定Google驗證檔須保留原內容，其他HTML仍禁止發布',async()=>{const dir=await mkdtemp(join(tmpdir(),'uvrdc-verification-'));try{
+ const name=verificationFiles[0];await writeFile(join(dir,name),'<script>unapproved content</script>');
+ await assert.rejects(()=>checkDist(dir,projectContent(catalog),{base:'/',production:false,site:''}),/驗證檔案內容不符/);
+ await writeFile(join(dir,name),`google-site-verification: ${name}`);await writeFile(join(dir,'google-unselected.html'),'unselected');
+ await assert.rejects(()=>checkDist(dir,projectContent(catalog),{base:'/',production:false,site:''}),/不允許的發布檔案: google-unselected.html/);
+}finally{await rm(dir,{recursive:true,force:true});}});
 test('未選定檔案不能作為成功產物發布',async()=>{const dir=await mkdtemp(join(tmpdir(),'uvrdc-artifact-'));try{await writeFile(join(dir,'private.docx'),'fixture');await assert.rejects(()=>checkDist(dir,projectContent(catalog),{base:'/',production:false,site:''}),/不允許的發布檔案/);}finally{await rm(dir,{recursive:true,force:true});}});
 test('放入 assets 的未選定 JavaScript 也不能冒充建置輸出',async()=>{const dir=await mkdtemp(join(tmpdir(),'uvrdc-assets-'));try{await mkdir(join(dir,'assets'));await writeFile(join(dir,'assets','unselected.js'),'console.log("fixture")');await assert.rejects(()=>checkDist(dir,projectContent(catalog),{base:'/',production:false,site:''}),/未選定的素材/);}finally{await rm(dir,{recursive:true,force:true});}});
 test('撤下的研究 HTML 不得混入產物',async()=>{const dir=await mkdtemp(join(tmpdir(),'uvrdc-retired-'));try{await mkdir(join(dir,'research'));await writeFile(join(dir,'research','index.html'),'<main>Retired fixture</main>');await assert.rejects(()=>checkDist(dir,projectContent(catalog),{base:'/',production:false,site:''}),/未登錄的公開路由/);}finally{await rm(dir,{recursive:true,force:true});}});
