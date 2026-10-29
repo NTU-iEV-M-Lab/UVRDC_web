@@ -54,7 +54,7 @@ function Header() {
   <a className="skip-link" href="#main">{t("跳至主要內容")}</a>
   <div className="utility-bar"><div className="container"><a href="https://www.ntu.edu.tw/" target="_blank" rel="noreferrer">NATIONAL TAIWAN UNIVERSITY <ArrowUpRight size={11}/></a><span className="utility-tagline">{t("跨院整合・自主創新")}</span><LanguageSwitch/></div></div>
   <header className="site-header"><div className="container header-inner">
-   <Link to="/" className="brand" aria-label={t("臺大無人載具研發設計中心・首頁")}><Brand locale={locale} base={base} priority/></Link>
+   <Link to="/" className="brand"><Brand locale={locale} base={base} priority/><span className="sr-only">{t("首頁")}</span></Link>
    <NavigationMenuRoot className="desktop-nav" aria-label={t("主要導覽")} delayDuration={150}>
     <NavigationMenu.List className="primary-nav-list">
      <NavigationMenu.Item className="primary-nav-item">

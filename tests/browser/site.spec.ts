@@ -224,7 +224,7 @@ test('中心子頁的桌機鍵盤選單、手機折疊、舊錨點與無JS名冊
 test('三十四頁WCAG AA與降低動畫設定',async({page})=>{
  test.setTimeout(120000);
  for(const route of config.routes){
-  await page.goto(base+route.slice(1));const results=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();
+  await page.goto(base+route.slice(1));const results=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
   expect(results.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),route).toEqual([]);
  }
  await page.emulateMedia({reducedMotion:'reduce'});expect(await page.locator('html').evaluate(e=>getComputedStyle(e).scrollBehavior)).toBe('auto');
