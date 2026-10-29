@@ -1,0 +1,89 @@
+.center-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 390px;
+  min-width: 0;
+  color: #f7faff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  text-align: left;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.center-brand__icon {
+  display: block;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.center-brand__copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.center-brand__university {
+  display: block;
+  color: #c8dcec;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.center-brand__chinese {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.center-brand__english {
+  display: block;
+  color: #c8dcec;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.center-brand__english > span,
+.center-brand__english-primary > span {
+  display: block;
+}
+
+.center-brand__english-primary {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+  .center-brand {
+    gap: 8px;
+  }
+
+  .center-brand__icon {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .center-brand__chinese {
+    font-size: 1.125rem;
+  }
+
+  .center-brand__english-primary {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .center-brand__english > span {
+    display: inline;
+  }
+}

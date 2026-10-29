@@ -1,0 +1,173 @@
+[
+  {
+    "file": "assets/center-icon.png",
+    "sourceId": "S36",
+    "caption": "中心精修圖示；校名與中心名稱以網頁文字呈現。",
+    "alt": "藍色菱形與感知弧線構成的中心圖示。",
+    "width": 512,
+    "height": 512,
+    "kind": "logo"
+  },
+  {
+    "file": "assets/center-logo.png",
+    "sourceId": "S03",
+    "caption": "臺大無人載具研發設計中心正式標誌。",
+    "alt": "臺大無人載具研發設計中心，Unmanned Vehicles Research and Development Center, NTU。",
+    "width": 3095,
+    "height": 718,
+    "kind": "logo"
+  },
+  {
+    "file": "assets/facility-uav.webp",
+    "sourceId": "S04",
+    "caption": "室內四旋翼風擾控制實驗情境｜智慧型載具與機電整合實驗室研究簡報。",
+    "alt": "室內四旋翼實驗載具與風扇配置，用於風擾及模型不確定性下的控制研究。",
+    "width": 720,
+    "height": 1280,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-ai.webp",
+    "sourceId": "S09",
+    "caption": "2026 年 7 月 30 日臺美 AI 與半導體圓桌會議合影。",
+    "alt": "2026 年 7 月 30 日臺美 AI 與半導體圓桌會議與會者合影。",
+    "width": 1200,
+    "height": 900,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-tdth.webp",
+    "sourceId": "S12",
+    "caption": "2026 臺灣國防科技黑客松活動合影。",
+    "alt": "2026 臺灣國防科技黑客松參與者在會場合影，前方展示活動布條與中心標誌。",
+    "width": 1200,
+    "height": 675,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-forum-2024-main.webp",
+    "sourceId": "S21",
+    "caption": "2024 台美國際無人載具科技與應用論壇會場。",
+    "alt": "2024 台美國際無人載具科技與應用論壇講堂實況，與會者面向講者及活動名稱投影。",
+    "width": 2000,
+    "height": 1128,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-forum-2024-visit.webp",
+    "sourceId": "S21",
+    "caption": "2024 論壇展場參訪與技術交流。",
+    "alt": "2024 論壇來賓於展場聆聽技術介紹，現場展示無人載具及系統。",
+    "width": 1400,
+    "height": 1050,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-forum-2024-exhibition.webp",
+    "sourceId": "S21",
+    "caption": "2024 論壇參展單位的無人機與技術展示。",
+    "alt": "論壇參與者於企業展位觀看無人機、感測器及技術海報。",
+    "width": 1400,
+    "height": 790,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-forum-2024-vehicles.webp",
+    "sourceId": "S21",
+    "caption": "2024 論壇參展單位展示的無人船與無人機。",
+    "alt": "2024 論壇雷虎科技展位陳列無人船與多架無人機，屬參展單位展示。",
+    "width": 1400,
+    "height": 790,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-forum-2024-networking.webp",
+    "sourceId": "S21",
+    "caption": "2024 論壇與會者於會場交流。",
+    "alt": "2024 論壇中場時間，臺美產學界參與者在會場大廳交流。",
+    "width": 1400,
+    "height": 790,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-guam-2026-uog.webp",
+    "sourceId": "S24",
+    "caption": "關島大學交流合影。",
+    "alt": "臺灣訪問團與關島大學代表於校徽前合影。",
+    "width": 1400,
+    "height": 788,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-guam-2026-geda.webp",
+    "sourceId": "S24",
+    "caption": "關島經濟發展局交流合影。",
+    "alt": "訪問團與關島經濟發展局代表於 Guam Economic Development Authority 背板前合影。",
+    "width": 1400,
+    "height": 1050,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/event-pqc-2024-poster.webp",
+    "sourceId": "S28",
+    "caption": "2024 年 11 月 7 日 PQC 汽車資安交流原始海報；QR code 與報名資訊為歷史資料，不代表目前開放報名。",
+    "alt": "PQC 汽車產業資安交流歷史海報，載明11月7日09:30–12:15、四位專家及中心等主協辦單位。",
+    "width": 1253,
+    "height": 1766,
+    "kind": "figure"
+  },
+  {
+    "file": "assets/director-kang-li.webp",
+    "sourceId": "S34",
+    "caption": "李綱主任照片，由中心提供。",
+    "alt": "李綱主任穿著綠色外套，在戶外雪地拍攝的照片。",
+    "width": 492,
+    "height": 559,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/facility-avl-front.webp",
+    "sourceId": "S31",
+    "caption": "AVL 設備的待測件安裝介面與扭力計配置（前視）。",
+    "alt": "AVL 測試設備前視照片，可見金屬安裝平台、中央軸孔與後方 HBM 扭力計。",
+    "width": 960,
+    "height": 944,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/facility-avl-side.webp",
+    "sourceId": "S31",
+    "caption": "AVL 設備的支撐治具與量測端配置（側視）。",
+    "alt": "AVL 設備側視照片，可見藍色設備本體、L 型支撐治具與量測端配置。",
+    "width": 961,
+    "height": 944,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/platform-amr-concept.webp",
+    "sourceId": "S33",
+    "caption": "AMR 模型示意｜2024 年實驗室介紹簡報。",
+    "alt": "自主移動機器人的模型示意，藍白色上部搭載於有輪子的移動底盤。",
+    "width": 1200,
+    "height": 749,
+    "kind": "concept"
+  },
+  {
+    "file": "assets/platform-autonomous-bus.webp",
+    "sourceId": "S33",
+    "caption": "自駕巴士實車照片｜2024 年實驗室介紹簡報。",
+    "alt": "白色自駕巴士的實車照片，車頂與車頭可見感測器配置。",
+    "width": 1010,
+    "height": 757,
+    "kind": "photo"
+  },
+  {
+    "file": "assets/platform-uav-concept.webp",
+    "sourceId": "S33",
+    "caption": "無人機機型示意｜2024 年實驗室介紹簡報。",
+    "alt": "四旋翼無人機機型示意，可見四組螺旋槳、起落架與機身下方的攝影機。",
+    "width": 812,
+    "height": 426,
+    "kind": "concept"
+  }
+]

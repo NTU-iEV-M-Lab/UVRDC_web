@@ -1,0 +1,58 @@
+import type {EventTranslation} from '../localization';
+
+export const additionalEnglishEvents:Record<string,EventTranslation>={
+ 'pqc-automotive-cybersecurity-2024':{
+  title:'PQC Migration in the Automotive Industry: Applications and Cybersecurity Challenges',
+  summary:'Co-organized by the Center and QSMC, this exchange connected automotive cybersecurity, quantum-safe signatures, and unmanned systems. The published program lists Director Kang Li as panel moderator.',
+  venue:'Room 203, 2F, College of Engineering Building, NTU',
+  organizers:'Organizers: Chelpis Quantum Safe Migration Center and NTU Unmanned Vehicles Research and Development Center. Supporting organizations: Taiwan Quantum Safe Association, Taiwan Unmanned Aircraft Systems Technology and Industry Integration Alliance, and Taiwan RISC-V Alliance.',
+  format:'Technical Exchange',region:'International Industry–Academia',
+  centerRole:'The Center was a co-organizer. The published program lists Director Kang Li as moderator of the panel on automotive and unmanned-system cryptography.',
+  topics:['Challenges and trends in automotive cybersecurity','Quantum-safe digital signatures','Cryptographic needs of vehicles and unmanned systems'],
+  sections:[
+   {title:'Connecting automotive and unmanned-system security',paragraphs:['On November 7, 2024, Chelpis Quantum Safe Migration Center and the NTU Center co-organized an exchange at NTU’s College of Engineering Building. Its original poster is titled “QSMC PQC Migration on Automotive Industry,” connecting automotive applications, cryptography, and unmanned systems.']},
+   {title:'Cybersecurity engineering and digital signatures',paragraphs:['The published program paired Dr. Yi (Estelle) Wang’s automotive cybersecurity keynote with Dr. Matthias J. Kannwischer’s update on quantum-safe digital signatures, bringing application needs and cryptographic research into the same discussion.']},
+   {title:'The Center director’s panel role',paragraphs:['The program lists Director Kang Li as moderator of “Automotives & UAS Cybersecurity in the Quantum Era.” The poster also features Dr. Yi (Estelle) Wang, Dr. Matthias J. Kannwischer, and Ruben Niederhagen, with their affiliations at the time.']},
+   {title:'An archival poster and program',paragraphs:['The poster gives 09:30–12:15 as the event time; individual published sessions begin at 10:00. The schedule below preserves those times. The poster, including its QR code and registration information, is historical material rather than a current invitation to register.']},
+  ],
+  agendaLabel:'Published Program',
+  agenda:[
+   {title:'Opening',description:'Mr. Ming Chih, as listed in the published program.'},
+   {title:'Automotive cybersecurity: challenges and trends',description:'Keynote by Dr. Yi (Estelle) Wang.'},
+   {title:'Coffee break',description:'Scheduled networking break.'},
+   {title:'An update on quantum-safe digital signatures',description:'Technical presentation by Dr. Matthias J. Kannwischer.'},
+   {title:'Cryptographic challenges for vehicles and unmanned systems',description:'Panel discussion; the program lists Director Kang Li as moderator.'},
+  ],
+  resourceLabels:['Organizer’s event page and historical program'],
+ },
+ 'ai-law-generative-ai-conference-2024':{
+  title:'2024 7th International Academic Conference on AI Laws',
+  summary:'Under the theme “The AI Basic Act and Generative AI,” the program connected technical models, business models, and governance. It lists Director Kang Li as a Session 2 speaker on generative AI business models and technical and legal risks.',
+  venue:'Room 1001, 10F, Chang Yung-Fa Foundation International Convention Center',
+  organizers:'Organized by the International Artificial Intelligence and Law Research Foundation. The Center director is listed as a speaker; the Center is not listed as an organizer.',
+  format:'Academic Conference',region:'International Academic',
+  centerRole:'The official program lists Director Kang Li as a speaker in Session 2, “Technical Model Issues in Generative AI.” This record presents the scheduled role and topic.',
+  topics:['Trustworthy AI and technical models','Generative AI business models and technical and legal risks','Generative AI governance and international dialogue','The AI Basic Act and international governance'],
+  sections:[
+   {title:'A program connecting AI technology and law',paragraphs:['The seventh conference focused on “The AI Basic Act and Generative AI” on November 2, 2024, at the Chang Yung-Fa Foundation International Convention Center. The organizer, the International Artificial Intelligence and Law Research Foundation, also published a post-event review. This page draws on the two-page program to present the Center-related topic and session themes.']},
+   {title:'The director’s scheduled topic',paragraphs:['The official program lists Director Kang Li in Session 2, “Technical Model Issues in Generative AI.” His topic translates as “The Development of Generative AI Business Models and Potential Technical and Legal Risks.” Other scheduled reports addressed model integrity and innovative architectures, placing his topic alongside related questions about models, applications, and risks.']},
+   {title:'From trustworthy AI to international governance',paragraphs:['The four sessions covered trustworthy AI governance, technical model issues, generative AI governance, and the AI Basic Act and international governance. The program included speakers from academic institutions in the United States, Germany, and Spain, with topics ranging from European AI legislation to AI and money laundering and the diffusion of regulation.']},
+   {title:'Reading the Center’s role through the historical program',paragraphs:['The director’s report is listed within Session 2, 10:55–12:20. Individual presentation start and end times were not provided. The Center is not listed as an organizer; the director’s role and topic are presented as scheduled in the official program. Links below lead to the organizer’s original announcement and post-event review.']},
+  ],
+  agendaLabel:'Originally Announced Program',
+  agenda:[
+   {title:'Registration',description:'As scheduled in the original program.'},
+   {title:'Introduction and opening remarks',description:'Introduction: legislative trends in AI.'},
+   {title:'Group photo',description:'As scheduled in the original program.'},
+   {title:'Session 1: Toward trustworthy AI governance',description:'Trustworthy AI governance and the future workplace.'},
+   {title:'Coffee break',description:'Morning networking break.'},
+   {title:'Session 2: Technical model issues in generative AI',description:'The program lists Director Kang Li on generative AI business models and technical and legal risks, alongside reports on model integrity and innovative architectures.'},
+   {title:'Midday break',description:'The scheduled midday interval; this does not indicate that meals were provided.'},
+   {title:'Session 3: Governance of generative AI',description:'Topics included governance risks, digital services, export controls, and financial applications.'},
+   {title:'Coffee break',description:'Afternoon networking break.'},
+   {title:'Session 4: The AI Basic Act and international governance',description:'Topics included European AI legislation, AI and money laundering, international governance, and regulatory diffusion.'},
+   {title:'Closing remarks',description:'As scheduled in the original program.'},
+  ],
+  resourceLabels:['Foundation’s original announcement and program','Foundation’s post-event review'],
+ },
+};
